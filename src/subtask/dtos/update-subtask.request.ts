@@ -1,3 +1,3 @@
 export class UpdateSubtaskRequest {
-    status: string;
+  status: string;
 }

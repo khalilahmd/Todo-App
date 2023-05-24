@@ -17,6 +17,6 @@ import { SubtaskModule } from './subtask/subtask.module';
     SubtaskModule,
   ],
   controllers: [AppController],
-  providers: [AppService], 
+  providers: [AppService],
 })
 export class AppModule {}

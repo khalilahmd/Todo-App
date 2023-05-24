@@ -1,51 +1,51 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { TextField, Button } from '@material-ui/core';
-import { Add as AddIcon, ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
+import { Add as AddIcon } from '@material-ui/icons';
 
 const CreateTodo = ({ addTodo, loading }) => {
-const [inputValue, setInputValue] = useState('');
-const [todos, setTodos] = useState([]);
+  const [inputValue, setInputValue] = useState('');
 
-const handleInputChange = (e) => {
+  const handleInputChange = (e) => {
     setInputValue(e.target.value);
-};
+  };
 
-const handleAddTodo = () => {
+  const handleAddTodo = () => {
     if (inputValue.trim() !== '') {
       addTodo(inputValue);
-        setInputValue('');
+      setInputValue('');
     }
-};
+  };
 
   return (
     <div style={{ display: 'flex', alignItems: 'center' }}>
-        <TextField
+      <TextField
         label="What to do?"
         value={inputValue}
         onChange={handleInputChange}
         variant="outlined"
         fullWidth
         margin="normal"
-        />
+      />
 
-        <Button
+      <Button
         variant="contained"
         color="primary"
+        disabled={loading}
         startIcon={<AddIcon />}
         onClick={handleAddTodo}
         style={{ marginLeft: '10px', fontSize: '0.9rem', width: '160px' }}
         size="small"
-        >
+      >
         Add Todo
-        </Button>
+      </Button>
     </div>
-  )
-}
+  );
+};
 
 CreateTodo.propTypes = {
   addTodo: PropTypes.func,
   loading: PropTypes.bool,
-}
+};
 
 export default CreateTodo;

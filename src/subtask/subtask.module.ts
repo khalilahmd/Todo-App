@@ -5,13 +5,11 @@ import { SubtasksService } from './subtasks.service';
 import { SubtasksController } from './subtasks.controller';
 
 @Module({
-    imports: [
-        MongooseModule.forFeature([
-            {name: 'Subtasks', schema: SubtaskSchema },
-        ])
-    ],
-    controllers: [SubtasksController],
-    providers: [SubtasksService],
-    exports: [SubtasksService],
+  imports: [
+    MongooseModule.forFeature([{ name: 'Subtasks', schema: SubtaskSchema }]),
+  ],
+  controllers: [SubtasksController],
+  providers: [SubtasksService],
+  exports: [SubtasksService],
 })
 export class SubtaskModule {}

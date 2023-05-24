@@ -1,7 +1,7 @@
-import { Document } from "mongoose";
+import { Document } from 'mongoose';
 
-export interface ITodo extends Document{
-    title: string;
-    status: 'pending' | 'completed';
-    created_at: Date;
+export interface ITodo extends Document {
+  title: string;
+  status: 'pending' | 'completed';
+  created_at: Date;
 }
