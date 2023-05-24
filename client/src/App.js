@@ -1,9 +1,9 @@
-import Main from './modules/Main/index';
+import Home from './modules/Home/index';
 
 function App() {
 
   return (
-    <h2>Hello World</h2>
+    <Home />
   );
 };
 
