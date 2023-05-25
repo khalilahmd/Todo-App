@@ -7,7 +7,7 @@ import {
   Put,
   UseInterceptors,
 } from '@nestjs/common';
-import { ResponseInterceptor } from 'src/interceptors/response.interceptor';
+import { ResponseInterceptor } from '../interceptors/response.interceptor';
 import { TodosService } from './todos.service';
 import { CreateTodoRequest } from './dtos/create-todo.request';
 import { UpdateTodoRequest } from './dtos/update-todo.request';

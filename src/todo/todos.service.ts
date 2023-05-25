@@ -10,7 +10,7 @@ import { ITodo } from './interfaces/todo.interface';
 import { CreateTodoRequest } from './dtos/create-todo.request';
 import { UpdateTodoRequest } from './dtos/update-todo.request';
 import { GetTodoResponse } from './dtos/get-todo-response';
-import { transformTodo } from 'src/utils/transformTodo';
+import { transformTodo } from '../utils/transformTodo';
 
 @Injectable()
 export class TodosService {
@@ -18,18 +18,23 @@ export class TodosService {
 
   // Method to find all available todos
   findAll = async (): Promise<GetTodoResponse[]> => {
-    const todos = await this.todoModel.aggregate([
-      {
-        $lookup: {
-          from: 'subtasks',
-          localField: '_id',
-          foreignField: 'todo_id',
-          as: 'subtasks',
+    try {
+      const todos = await this.todoModel.aggregate([
+        {
+          $lookup: {
+            from: 'subtasks',
+            localField: '_id',
+            foreignField: 'todo_id',
+            as: 'subtasks',
+          },
         },
-      },
-    ]);
-    // returning todos in desired format
-    return transformTodo(todos);
+      ]);
+
+      // returning todos in desired format
+      return transformTodo(todos);
+    } catch (error) {
+      throw new HttpException(error.message, HttpStatus.BAD_REQUEST);
+    }
   };
 
   // Method to create a new todo
@@ -37,9 +42,8 @@ export class TodosService {
     try {
       if (!todo?.title) {
         throw new BadRequestException('Title is required');
-      }
-      const newTodo = new this.todoModel(todo);
-      await newTodo.save();
+      } 
+      await this.todoModel.create(todo);
       return `Created Successfully!`;
     } catch (error) {
       throw new HttpException(error.message, HttpStatus.BAD_REQUEST);

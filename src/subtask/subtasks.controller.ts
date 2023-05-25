@@ -7,7 +7,7 @@ import {
   Put,
   UseInterceptors,
 } from '@nestjs/common';
-import { ResponseInterceptor } from 'src/interceptors/response.interceptor';
+import { ResponseInterceptor } from '../interceptors/response.interceptor';
 import { SubtasksService } from './subtasks.service';
 import { CreateSubtaskRequest } from './dtos/create-subtask.request';
 import { UpdateSubtaskRequest } from './dtos/update-subtask.request';
