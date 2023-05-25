@@ -1,73 +1,60 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+# Todo App (React/ Mongo/ Nest)
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+```
+
+This project is a full-stack application built with React and Nest. This App will provide you help to manage you todos.
+
+This README will provide you instruction on how to set up and run project locally. 
+```
+
+## Prerequisites
+
+To run this project locally, you need to have the following software installed on your machine:
+```
+Node.js (version latest): Download and install Node.js
+npm (Node Package Manager, usually comes with Node.js installation)
+mongo (Installed and running locally on your machine)
+```
 
 ## Installation
 
-```bash
-$ npm install
+To set up the project, follow these steps:
+```
+Download the Zip file
+Extract the file
+open the exracted directory in terminal
+run the command on root to install server dependencies  'npm install'
+go to client directory 'cd client'
+run the command in client to install client dependencies 'npm install'
+then again come back to server or root
+run command 'npm start' (this will start you Frontend and Backend)
 ```
 
-## Running the app
+It would take some time to compile the code first time. After successful compilation, your Frontend and Backend will be up.
 
-```bash
-# development
-$ npm run start
+For Forntend you can visit http://localhost:3000
+For Backend you can visit http://localhost:9000
 
-# watch mode
-$ npm run start:dev
+Additionally your seeding data will be automatically added to database for initial testing.
 
-# production mode
-$ npm run start:prod
+If you make any changes and want to automaticaly trigger a rebuild, and want that the changes should be reflected in the browser then you have to start a development server.
+You just have to stop the existing server, press Ctrl + C in the terminal to stop the server.
+Then run this command to development server.
+
+```
+npm run start:dev
+
 ```
 
-## Test
+## Testing
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+For testing details you can run the following command
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+npm run test:cov
+```
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+Khalil Ahmed License
