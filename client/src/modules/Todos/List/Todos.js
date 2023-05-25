@@ -33,7 +33,7 @@ const Todos = ({
   // Method to add new subtask
   const addSubtask = (todo) => {
     if (subtaskField.trim() !== '') {
-      handleAddSubtask(subtaskField, todo.id);
+      handleAddSubtask(subtaskField, todo);
       setSubtaskField('');
     }
   };

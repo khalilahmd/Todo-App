@@ -26,8 +26,14 @@ const HomePage = ({
   };
 
   // Create new Subtask
-  const handleAddSubtask = async (title, todo_id) => {
+  const handleAddSubtask = async (title, todo) => {
+    const todo_id = todo.id;
     await createSubtask({ title, todo_id });
+    if (todo.status === 'completed') {
+      const id = todo.id;
+      const status = 'pending';
+      await handleUpdateTodo({ id, status });
+    }
     getTodoList();
   };
 
