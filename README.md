@@ -2,12 +2,10 @@
 
 ## Description
 
-```
 
 This project is a full-stack application built with React and Nest. This App will provide you help to manage you todos.
 
 This README will provide you instruction on how to set up and run project locally. 
-```
 
 ## Prerequisites
 
